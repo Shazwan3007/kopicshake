@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Kopi C Shake | Kopi Harga Mesra, Rasa Premium</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --brown: #5b3825;
+      --brown-dark: #3d2418;
+      --cream: #fff8ef;
+      --cream-dark: #f3e5d2;
+      --orange: #c9823c;
+      --white: #ffffff;
+      --text: #29221e;
+      --muted: #756b65;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: min(92%, 1100px);
+      margin: auto;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 248, 239, 0.96);
+      border-bottom: 1px solid #eadaca;
+      backdrop-filter: blur(10px);
+    }
+
+    .nav {
+      min-height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--brown);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-weight: 600;
+      color: var(--muted);
+    }
+
+    .nav-links a:hover {
+      color: var(--brown);
+    }
+
+    .menu-btn {
+      display: none;
+      border: none;
+      background: none;
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    /* =========================
+       BUTTON
+    ========================= */
+
+    .btn {
+      display: inline-block;
+      padding: 14px 22px;
+      border-radius: 50px;
+      font-weight: 700;
+      transition: 0.2s;
+    }
+
+    .btn-primary {
+      background: var(--brown);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: var(--brown-dark);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      border: 1px solid #d7c3ae;
+      color: var(--brown);
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      padding: 80px 0;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .tag {
+      display: inline-block;
+      margin-bottom: 15px;
+      color: var(--orange);
+      font-weight: 800;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.6rem, 6vw, 4.7rem);
+      line-height: 1.05;
+      color: var(--brown-dark);
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: var(--muted);
+      max-width: 550px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .hero-image {
+      min-height: 430px;
+      border-radius: 30px;
+      background:
+        linear-gradient(
+          145deg,
+          #d9b58e,
+          #f4ddc0
+        );
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 30px;
+      color: var(--brown);
+      font-weight: 700;
+    }
+
+    /* =========================
+       GENERAL SECTION
+    ========================= */
+
+    section {
+      padding: 80px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 45px;
+    }
+
+    .section-title h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: var(--brown-dark);
+      margin-bottom: 12px;
+    }
+
+    .section-title p {
+      color: var(--muted);
+    }
+
+    /* =========================
+       PRODUCTS
+    ========================= */
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .product {
+      background: white;
+      border: 1px solid #eadaca;
+      border-radius: 22px;
+      padding: 28px;
+      text-align: center;
+    }
+
+    .product-icon {
+      width: 70px;
+      height: 70px;
+      margin: 0 auto 20px;
+      border-radius: 20px;
+      background: var(--cream-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+    }
+
+    .product h3 {
+      color: var(--brown);
+      margin-bottom: 8px;
+    }
+
+    .product p {
+      color: var(--muted);
+    }
+
+    /* =========================
+       USP
+    ========================= */
+
+    .usp-section {
+      background: white;
+    }
+
+    .usp-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .usp {
+      padding: 30px;
+      border-radius: 22px;
+      background: var(--cream);
+    }
+
+    .usp-number {
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+
+    .usp h3 {
+      color: var(--brown);
+      margin-bottom: 8px;
+    }
+
+    .usp p {
+      color: var(--muted);
+    }
+
+    /* =========================
+       PRICE
+    ========================= */
+
+    .price-box {
+      max-width: 750px;
+      margin: auto;
+      text-align: center;
+      background: var(--brown);
+      color: white;
+      padding: 55px 25px;
+      border-radius: 30px;
+    }
+
+    .price-box span {
+      display: block;
+      opacity: 0.8;
+      margin-bottom: 10px;
+    }
+
+    .price {
+      font-size: clamp(3rem, 8vw, 5rem);
+      font-weight: 900;
+      line-height: 1;
+      margin-bottom: 15px;
+    }
+
+    .price-box p {
+      opacity: 0.85;
+    }
+
+    /* =========================
+       LOCATION
+    ========================= */
+
+    .location {
+      text-align: center;
+    }
+
+    .location-icon {
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
+
+    .location h2 {
+      color: var(--brown-dark);
+      margin-bottom: 10px;
+    }
+
+    .location p {
+      color: var(--muted);
+    }
+
+    /* =========================
+       ORDER
+    ========================= */
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .step {
+      background: white;
+      border: 1px solid #eadaca;
+      padding: 30px;
+      border-radius: 22px;
+    }
+
+    .step-number {
+      width: 45px;
+      height: 45px;
+      background: var(--brown);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+
+    .step h3 {
+      color: var(--brown);
+      margin-bottom: 8px;
+    }
+
+    .step p {
+      color: var(--muted);
+    }
+
+    /* =========================
+       CTA
+    ========================= */
+
+    .final-cta {
+      padding-top: 40px;
+      padding-bottom: 100px;
+    }
+
+    .cta-box {
+      background: var(--brown-dark);
+      color: white;
+      padding: 70px 25px;
+      border-radius: 30px;
+      text-align: center;
+    }
+
+    .cta-box h2 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      margin-bottom: 15px;
+    }
+
+    .cta-box p {
+      max-width: 600px;
+      margin: auto;
+      opacity: 0.8;
+    }
+
+    .cta-box .btn {
+      margin-top: 25px;
+      background: white;
+      color: var(--brown);
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      padding: 35px 0 100px;
+      border-top: 1px solid #eadaca;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    /* =========================
+       MOBILE CTA
+    ========================= */
+
+    .mobile-cta {
+      display: none;
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width: 800px) {
+
+      .nav-links {
+        position: absolute;
+        top: 70px;
+        left: 4%;
+        right: 4%;
+        display: none;
+        flex-direction: column;
+        gap: 0;
+        background: white;
+        padding: 15px;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-links a {
+        display: block;
+        padding: 12px;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .nav > .btn {
+        display: none;
+      }
+
+      .hero {
+        padding: 55px 0;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .hero-image {
+        min-height: 330px;
+      }
+
+      .products,
+      .usp-grid,
+      .steps {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 60px 0;
+      }
+
+      .mobile-cta {
+        display: block;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 999;
+        padding: 10px 15px;
+        background: rgba(255,255,255,0.96);
+        border-top: 1px solid #eadaca;
+      }
+
+      .mobile-cta .btn {
+        width: 100%;
+        text-align: center;
+      }
+
+      footer {
+        padding-bottom: 100px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       HEADER
+  ========================= -->
+
+  <header>
+    <div class="container nav">
+
+      <a href="#home" class="logo">
+        Kopi C Shake
+      </a>
+
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#menu">Minuman</a></li>
+          <li><a href="#why">Kenapa Kami</a></li>
+          <li><a href="#location">Lokasi</a></li>
+        </ul>
+      </nav>
+
+      <a
+        href="https://wa.me/60138996174"
+        class="btn btn-primary">
+        WhatsApp
+      </a>
+
+      <button
+        class="menu-btn"
+        id="menuBtn"
+        aria-label="Buka menu">
+        ☰
+      </button>
+
+    </div>
+  </header>
+
+
+  <main id="home">
+
+    <!-- =========================
+         HERO
+    ========================= -->
+
+    <section class="hero">
+
+      <div class="container hero-grid">
+
+        <div>
+
+          <span class="tag">
+            Kopi & Minuman • Pekan Tuaran
+          </span>
+
+          <h1>
+            Kopi Harga Mesra,
+            Rasa Premium.
+          </h1>
+
+          <p>
+            Nikmati kopi dan pilihan minuman lain
+            dengan harga RM5 hingga RM10.
+          </p>
+
+          <div class="hero-buttons">
+
+            <a
+              href="https://wa.me/60138996174"
+              class="btn btn-primary">
+              WhatsApp Untuk Pertanyaan
+            </a>
+
+            <a
+              href="#menu"
+              class="btn btn-secondary">
+              Lihat Minuman
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!--
+          GANTIKAN RUANG INI
+          DENGAN GAMBAR PRODUK SEBENAR
+        -->
+
+        <div class="hero-image">
+
+          <div>
+            ☕
+            <br><br>
+
+            <strong>
+              Gambar Produk Kopi C Shake
+            </strong>
+
+            <br>
+
+            <small>
+              Gantikan placeholder ini
+              dengan gambar sebenar.
+            </small>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         PRODUCTS
+    ========================= -->
+
+    <section id="menu">
+
+      <div class="container">
+
+        <div class="section-title">
+
+          <h2>
+            Pilihan Minuman
+          </h2>
+
+          <p>
+            Pilih minuman yang sesuai
+            dengan selera anda.
+          </p>
+
+        </div>
+
+
+        <div class="products">
+
+          <article class="product">
+
+            <div class="product-icon">
+              ☕
+            </div>
+
+            <h3>
+              Kopi
+            </h3>
+
+            <p>
+              Pilihan kopi untuk anda
+              yang mahukan rasa premium
+              pada harga berpatutan.
+            </p>
+
+          </article>
+
+
+          <article class="product">
+
+            <div class="product-icon">
+              🍵
+            </div>
+
+            <h3>
+              Matcha
+            </h3>
+
+            <p>
+              Pilihan minuman matcha
+              untuk anda yang mahukan
+              sesuatu selain kopi.
+            </p>
+
+          </article>
+
+
+          <article class="product">
+
+            <div class="product-icon">
+              🥤
+            </div>
+
+            <h3>
+              Mojito
+            </h3>
+
+            <p>
+              Pilihan minuman menyegarkan
+              untuk dinikmati bila-bila masa.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         USP
+    ========================= -->
+
+    <section id="why" class="usp-section">
+
+      <div class="container">
+
+        <div class="section-title">
+
+          <h2>
+            Kenapa Kopi C Shake?
+          </h2>
+
+          <p>
+            Minuman yang sesuai untuk
+            pelanggan yang mahukan pilihan
+            berkualiti pada harga berpatutan.
+          </p>
+
+        </div>
+
+
+        <div class="usp-grid">
+
+          <article class="usp">
+
+            <div class="usp-number">
+              💰
+            </div>
+
+            <h3>
+              Harga Berpatutan
+            </h3>
+
+            <p>
+              Pilihan minuman bermula
+              dari RM5 hingga RM10.
+            </p>
+
+          </article>
+
+
+          <article class="usp">
+
+            <div class="usp-number">
+              ☕
+            </div>
+
+            <h3>
+              Rasa Premium
+            </h3>
+
+            <p>
+              Menawarkan rasa premium
+              tanpa harga yang terlalu tinggi.
+            </p>
+
+          </article>
+
+
+          <article class="usp">
+
+            <div class="usp-number">
+              🥤
+            </div>
+
+            <h3>
+              Banyak Pilihan
+            </h3>
+
+            <p>
+              Bukan kopi sahaja.
+              Terdapat juga matcha,
+              mojito dan minuman lain.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         PRICE
+    ========================= -->
+
+    <section>
+
+      <div class="container">
+
+        <div class="price-box">
+
+          <span>
+            HARGA MINUMAN
+          </span>
+
+          <div class="price">
+            RM5 – RM10
+          </div>
+
+          <p>
+            Minuman harga mesra poket
+            untuk dinikmati.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         LOCATION
+    ========================= -->
+
+    <section id="location">
+
+      <div class="container">
+
+        <div class="location">
+
+          <div class="location-icon">
+            📍
+          </div>
+
+          <h2>
+            Jumpa Kami Di Pekan Tuaran
+          </h2>
+
+          <p>
+            Berada di sekitar Pekan Tuaran?
+            Singgah dan cuba pilihan minuman
+            Kopi C Shake.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         ORDER
+    ========================= -->
+
+    <section>
+
+      <div class="container">
+
+        <div class="section-title">
+
+          <h2>
+            Cara Mendapatkan Minuman
+          </h2>
+
+          <p>
+            Untuk pertanyaan mengenai
+            minuman dan tempahan,
+            hubungi kami melalui WhatsApp.
+          </p>
+
+        </div>
+
+
+        <div class="steps">
+
+          <article class="step">
+
+            <div class="step-number">
+              01
+            </div>
+
+            <h3>
+              Pilih Minuman
+            </h3>
+
+            <p>
+              Pilih kopi atau minuman
+              yang anda inginkan.
+            </p>
+
+          </article>
+
+
+          <article class="step">
+
+            <div class="step-number">
+              02
+            </div>
+
+            <h3>
+              WhatsApp Kami
+            </h3>
+
+            <p>
+              Hubungi Kopi C Shake
+              untuk pertanyaan.
+            </p>
+
+          </article>
+
+
+          <article class="step">
+
+            <div class="step-number">
+              03
+            </div>
+
+            <h3>
+              Dapatkan Minuman
+            </h3>
+
+            <p>
+              Ikuti maklumat yang diberikan
+              oleh pihak Kopi C Shake.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         FINAL CTA
+    ========================= -->
+
+    <section class="final-cta">
+
+      <div class="container">
+
+        <div class="cta-box">
+
+          <h2>
+            Nak Cuba Kopi C Shake?
+          </h2>
+
+          <p>
+            Kopi harga mesra,
+            rasa premium.
+            Hubungi kami untuk pertanyaan.
+          </p>
+
+          <a
+            href="https://wa.me/60138996174"
+            class="btn">
+            WhatsApp Kopi C Shake
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer>
+
+    <div class="container">
+
+      <strong>
+        Kopi C Shake
+      </strong>
+
+      <p>
+        Pekan Tuaran
+      </p>
+
+      <p>
+        © 2026 Kopi C Shake
+      </p>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================
+       MOBILE CTA
+  ========================= -->
+
+  <div class="mobile-cta">
+
+    <a
+      href="https://wa.me/60138996174"
+      class="btn btn-primary">
+      WhatsApp Untuk Pertanyaan
+    </a>
+
+  </div>
+
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================= -->
+
+  <script>
+
+    const menuBtn =
+      document.getElementById("menuBtn");
+
+    const navLinks =
+      document.getElementById("navLinks");
+
+
+    menuBtn.addEventListener("click", function () {
+
+      navLinks.classList.toggle("active");
+
+    });
+
+
+    document
+      .querySelectorAll(".nav-links a")
+      .forEach(function(link) {
+
+        link.addEventListener("click", function() {
+
+          navLinks.classList.remove("active");
+
+        });
+
+      });
+
+  </script>
+
+</body>
+</html>
