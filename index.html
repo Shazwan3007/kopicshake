@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kopi C Shake | Simfoni Rasa Premium RM10 di Tuaran, Sabah</title>
+    <meta name="description" content="Nikmati Kopi, Matcha, dan Mojito kualiti premium pada harga rata RM10 sahaja. Kunjungi Kopi C Shake di Tuaran, Sabah atau pesan melalui WhatsApp sekarang!">
+    
+    <!-- Google Fonts: Hanken Grotesk -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* RESET & BASE STYLES */
+        :root {
+            --primary-dark: #121212;
+            --primary-dark-hover: #1F1F1F;
+            --accent-gold: #C5A065;
+            --accent-gold-hover: #D4B47D;
+            --bg-light: #FBF9F6;
+            --bg-card: #FFFFFF;
+            --text-main: #1A1A1A;
+            --text-muted: #666666;
+            --text-on-dark: #E0E0E0;
+            --border-color: #EFE8DC;
+            --border-color-dark: #333333;
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.04);
+            --shadow-md: 0 6px 24px rgba(0,0,0,0.06);
+            --radius-md: 8px;
+            --radius-lg: 16px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Hanken Grotesk', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding-bottom: 80px; /* Space for mobile sticky CTA */
+            -webkit-font-smoothing: antialiased;
+        }
+
+        @media (min-width: 769px) {
+            body { padding-bottom: 0; }
+        }
+
+        h1, h2, h3, h4 {
+            font-weight: 700;
+            color: var(--primary-dark);
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+        }
+
+        a { text-decoration: none; color: inherit; transition: var(--transition); }
+        ul { list-style: none; }
+
+        /* CONTAINER */
+        .container {
+            width: 100%;
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* BUTTONS */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 16px 32px;
+            border-radius: var(--radius-md);
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .btn-accent {
+            background-color: var(--accent-gold);
+            color: var(--primary-dark);
+        }
+
+        .btn-accent:hover {
+            background-color: var(--accent-gold-hover);
+            transform: translateY(-2px);
+        }
+
+        .btn-dark {
+            background-color: var(--primary-dark);
+            color: var(--accent-gold);
+            border: 1px solid var(--accent-gold);
+        }
+
+        .btn-dark:hover {
+            background-color: var(--primary-dark-hover);
+            transform: translateY(-2px);
+        }
+
+        .btn-whatsapp {
+            background-color: #25D366; /* WhatsApp Green */
+            color: #FFFFFF;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #1EBE5D;
+            transform: translateY(-2px);
+        }
+
+        /* HEADER */
+        .header {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            height: 80px;
+            display: flex;
+            align-items: center;
+        }
+
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-dark);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-accent { color: var(--accent-gold); }
+
+        /* HERO SECTION - DARK PREMIUM BACKGROUND */
+        .hero {
+            background-color: var(--primary-dark);
+            background-image: 
+                linear-gradient(135deg, rgba(18,18,18,1) 0%, rgba(31,31,31,0.95) 100%),
+                url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCIgdmlld0JveD0iMCAwIDgwIDgwIj48ZyBmaWxsPSIjRkVGOEVDIiBmaWxsLW9wYWNpdHk9IjAuMDUiPjxwYXRoIGQ9Ik0wIDBoNDB2NDBIMHptNDAgNDBoNDB2NDBINDB6TTAgNDBoNDB2NDBIMHptNDAgMGg0MHY0MEg0MHoiLz48L2c+PC9zdmc+');
+            background-size: cover;
+            background-position: center;
+            color: var(--text-on-dark);
+            padding: 100px 0;
+            text-align: center;
+            border-bottom: 4px solid var(--accent-gold);
+        }
+
+        .hero-badge {
+            display: inline-block;
+            border: 1px solid var(--accent-gold);
+            color: var(--accent-gold);
+            font-weight: 600;
+            font-size: 0.875rem;
+            padding: 8px 20px;
+            border-radius: 30px;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .hero h1 {
+            color: #FFFFFF;
+            font-size: 2.75rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero h1 span { color: var(--accent-gold); }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: rgba(255,255,255,0.8);
+            max-width: 650px;
+            margin: 0 auto 40px auto;
+            font-weight: 400;
+        }
+
+        /* SECTION GENERAL */
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .section-title h2 {
+            font-size: 2.25rem;
+            margin-bottom: 12px;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 16px;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--accent-gold);
+            border-radius: 2px;
+        }
+
+        .section-title p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        /* MENU SECTION */
+        .menu-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 32px;
+        }
+
+        .menu-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .menu-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: transparent;
+            transition: var(--transition);
+        }
+
+        .menu-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-md);
+            border-color: rgba(197, 160, 101, 0.3);
+        }
+
+        .menu-card:hover::before {
+            background-color: var(--accent-gold);
+        }
+
+        .menu-meta {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .menu-icon-box {
+            font-size: 2rem;
+            background-color: rgba(197, 160, 101, 0.1);
+            color: var(--accent-gold);
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            border: 1px solid rgba(197, 160, 101, 0.2);
+        }
+
+        .menu-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .menu-card p {
+            color: var(--text-muted);
+            font-size: 1rem;
+            margin-bottom: 30px;
+            flex-grow: 1;
+        }
+
+        .menu-price-tag {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 24px;
+            border-top: 1px solid var(--border-color);
+            background-color: rgba(249, 247, 243, 0.5);
+            margin: 0 -40px -40px -40px;
+            padding: 24px 40px;
+        }
+
+        .price-label {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .price-value {
+            font-size: 1.75rem;
+            font-weight: 800;
+            color: var(--primary-dark);
+        }
+
+        .price-currency {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--accent-gold);
+            margin-right: 2px;
+        }
+
+        /* FEATURES SECTION */
+        .features {
+            background-color: var(--primary-dark);
+            color: var(--text-on-dark);
+        }
+
+        .features .section-title h2,
+        .features .section-title p {
+            color: #FFFFFF;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 32px;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 32px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-color-dark);
+            transition: var(--transition);
+        }
+
+        .feature-card:hover {
+            border-color: var(--accent-gold);
+            background: rgba(197, 160, 101, 0.05);
+        }
+
+        .feature-card h3 {
+            font-size: 1.25rem;
+            color: #FFFFFF;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .feature-card h3 span {
+            color: var(--accent-gold);
+            font-size: 1.5rem;
+        }
+
+        .feature-card p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1rem;
+        }
+
+        /* LOCATION & CONTACT SECTION */
+        .contact-box {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 50px;
+            text-align: center;
+            box-shadow: var(--shadow-md);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-icon {
+            font-size: 2.5rem;
+            color: var(--accent-gold);
+            margin-bottom: 20px;
+        }
+
+        .contact-box h2 { margin-bottom: 15px; }
+        .contact-box p { color: var(--text-muted); margin-bottom: 35px; font-size: 1.1rem; }
+
+        /* FINAL CTA SECTION */
+        .final-cta {
+            background-color: var(--primary-dark);
+            background-image: 
+                linear-gradient(135deg, rgba(18,18,18,1) 0%, rgba(31,31,31,0.98) 100%),
+                url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCIgdmlld0JveD0iMCAwIDgwIDgwIj48ZyBmaWxsPSIjRkVGOEVDIiBmaWxsLW9wYWNpdHk9IjAuMDIiPjxwYXRoIGQ9Ik0wIDBoNDB2NDBIMHptNDAgNDBoNDB2NDBINDB6TTAgNDBoNDB2NDBIMHptNDAgMGg0MHY0MEg0MHoiLz48L2c+PC9zdmc+');
+            color: #FFFFFF;
+            text-align: center;
+            padding: 80px 24px;
+            border-radius: var(--radius-lg);
+            margin-bottom: 60px;
+            border: 1px solid var(--border-color-dark);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .final-cta h2 { color: #FFFFFF; font-size: 2.5rem; margin-bottom: 15px; }
+        .final-cta p { color: rgba(255,255,255,0.8); margin-bottom: 40px; font-size: 1.15rem; max-width: 600px; margin-left: auto; margin-right: auto;}
+
+        /* FOOTER */
+        .footer {
+            text-align: center;
+            padding: 30px 0;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
+            background-color: var(--bg-card);
+        }
+
+        /* STICKY BOTTOM CTA FOR MOBILE */
+        .sticky-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 15px 24px;
+            border-top: 1px solid var(--border-color);
+            box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.05);
+            z-index: 999;
+            display: block;
+        }
+
+        .sticky-cta .btn { width: 100%; justify-content: center; }
+
+        /* MEDIA QUERIES (DESKTOP / TABLET) */
+        @media (min-width: 768px) {
+            .hero { padding: 120px 0; }
+            .hero h1 { font-size: 3.5rem; }
+            
+            .section { padding: 100px 0; }
+            .section-title h2 { font-size: 2.75rem; }
+
+            .menu-grid { grid-template-columns: repeat(3, 1fr); }
+            .features-grid { grid-template-columns: repeat(3, 1fr); gap: 24px;}
+            
+            .final-cta { padding: 100px 40px; }
+            .final-cta h2 { font-size: 3rem; }
+
+            .sticky-cta { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <a href="#" class="logo">
+                Kopi C <span class="logo-accent">Shake</span>
+            </a>
+            <a href="https://wa.me/60138996174?text=Hai%20Kopi%20C%20Shake,%20saya%20berminat%20nak%20pesan%20minuman%20premium%20RM10." class="btn btn-whatsapp btn-sm" style="padding: 10px 20px; font-size: 0.875rem;">
+                Pesan Sekarang
+            </a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="container">
+            <span class="hero-badge">Tuaran's Finest Blend</span>
+            <h1>Simfoni Rasa Premium,<br>Kini Hanya <span>RM10 Sahaja.</span></h1>
+            <p>Alami kemewahan rasa Kopi, Matcha, dan Mojito gred kafe tanpa harga kafe mewah. Kepuasan kualiti yang berbaloi untuk setiap sen anda.</p>
+            
+            <a href="https://wa.me/60138996174?text=Hai%20Kopi%20C%20Shake,%20saya%20nak%20order%20Kopi/Matcha/Mojito%20RM10." class="btn btn-accent">
+                📲 Pesan Kopi Anda Sekarang
+            </a>
+        </div>
+    </section>
+
+    <!-- MENU SHOWCASE SECTION -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Koleksi Minuman Utama</h2>
+                <p>Setiap cawan dijanjikan kualiti rasa yang konsisten dan memuaskan.</p>
+            </div>
+
+            <div class="menu-grid">
+                <!-- Card 1: Kopi -->
+                <div class="menu-card">
+                    <div>
+                        <div class="menu-meta">
+                            <div class="menu-icon-box">☕</div>
+                            <h3>Kopi C Shake</h3>
+                        </div>
+                        <p>Himpunan biji kopi pilihan dengan bancuhan pekat, aroma wangi, dan tekstur berkrim yang sempurna.</p>
+                    </div>
+                    <div class="menu-price-tag">
+                        <span class="price-label">Harga Flat</span>
+                        <div class="price-value"><span class="price-currency">RM</span>10</div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Matcha -->
+                <div class="menu-card">
+                    <div>
+                        <div class="menu-meta">
+                            <div class="menu-icon-box">🍵</div>
+                            <h3>Matcha</h3>
+                        </div>
+                        <p>Serbuk Matcha gred premium yang diimport untuk rasa autentik, halus, dan lemak manis yang seimbang.</p>
+                    </div>
+                    <div class="menu-price-tag">
+                        <span class="price-label">Harga Flat</span>
+                        <div class="price-value"><span class="price-currency">RM</span>10</div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Mojito -->
+                <div class="menu-card">
+                    <div>
+                        <div class="menu-meta">
+                            <div class="menu-icon-box">🍹</div>
+                            <h3>Mojito</h3>
+                        </div>
+                        <p>Kombinasi buah-buahan segar, pudina, dan soda untuk ledakan rasa menyegarkan, sesuai untuk hari panas.</p>
+                    </div>
+                    <div class="menu-price-tag">
+                        <span class="price-label">Harga Flat</span>
+                        <div class="price-value"><span class="price-currency">RM</span>10</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VALUE PROPOSITION (FEATURES) SECTION -->
+    <section class="section features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Tanda Aras Kualiti Kami</h2>
+                <p>Kenapa Kopi C Shake menjadi pilihan utama peminat minuman di Tuaran.</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3><span>✨</span> Kualiti Premium</h3>
+                    <p>Kami mementingkan bahan mentah terbaik untuk memastikan setiap tegukan setanding dengan jenama kafe mewah.</p>
+                </div>
+                <div class="feature-card">
+                    <h3><span>💰</span> Harga Pintar RM10</h3>
+                    <p>Nikmati kemewahan rasa tanpa rasa bersalah. Satu harga flat RM10 untuk semua menu utama kami.</p>
+                </div>
+                <div class="feature-card">
+                    <h3><span>📍</span> Kebanggaan Tuaran</h3>
+                    <p>Beroperasi di tengah-tengah Tuaran, Sabah, kami sedia melayani komuniti tempatan dengan mesra.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOCATION & CONTACT SECTION -->
+    <section class="section">
+        <div class="container">
+            <div class="contact-box">
+                <div class="contact-icon">📍</div>
+                <h2>Kunjungi Kami di Tuaran</h2>
+                <p>Rasai sendiri perbezaan kualiti premium kami. Kami beroperasi di Tuaran, Sabah dan sedia menerima tempahan anda.</p>
+                <a href="https://wa.me/60138996174?text=Hai%20Kopi%20C%20Shake,%20boleh%20kongsikan%20lokasi%20tepat%20atau%20cara%20nak%20order?" class="btn btn-dark">
+                    Tanya Lokasi / Buat Tempahan
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA SECTION -->
+    <section class="container">
+        <div class="final-cta">
+            <h2>Sedia Untuk Simfoni Rasa Premium?</h2>
+            <p>Jangan lepaskan peluang untuk menikmati minuman kualiti gred kafe pada harga terbaik di Tuaran. Pesan sekarang melalui WhatsApp.</p>
+            <a href="https://wa.me/60138996174?text=Hai%20Kopi%20C%20Shake,%20saya%20nak%20order%20minuman%20RM10%20sekarang!" class="btn btn-accent">
+                📲 Pesan Melalui WhatsApp (RM10)
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Kopi C Shake Tuaran. Simfoni Rasa Premium di Setiap Tegukan.</p>
+        </div>
+    </footer>
+
+    <!-- STICKY BOTTOM CTA FOR MOBILE -->
+    <div class="sticky-cta">
+        <a href="https://wa.me/60138996174?text=Hai%20Kopi%20C%20Shake,%20saya%20berminat%20nak%20order%20minuman%20premium%20RM10." class="btn btn-whatsapp">
+            💬 Pesan Sekarang (RM10)
+        </a>
+    </div>
+
+</body>
+</html>
