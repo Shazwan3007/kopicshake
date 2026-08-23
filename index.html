@@ -1,0 +1,1436 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+  >
+
+  <title>
+    Kopi C Shake | Kopi, Matcha & Minuman Sejuk di Pekan Tuaran, Sabah
+  </title>
+
+  <meta
+    name="description"
+    content="Lihat menu Kopi C Shake di Pekan Tuaran, Sabah. Pilihan Kopi C Shake, Matcha, Milky Series, Mojito dan Shaken Iced Tea. Pesan terus melalui WhatsApp."
+  >
+
+  <meta name="theme-color" content="#2b160d">
+  <meta name="robots" content="index,follow">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Kopi C Shake | Kopi Kampung">
+  <meta
+    property="og:description"
+    content="Pilihan kopi, matcha dan minuman sejuk di Pekan Tuaran, Sabah."
+  >
+  <meta property="og:image" content="images/hero-drinks.jpg">
+
+  <link
+    rel="icon"
+    type="image/jpeg"
+    href="images/logo-kopi-c-shake.jpg"
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CafeOrCoffeeShop",
+    "name": "Kopi C Shake",
+    "description": "Pilihan kopi, matcha dan minuman sejuk di Pekan Tuaran, Sabah.",
+    "telephone": "+60134698137",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Pekan Tuaran",
+      "addressRegion": "Sabah",
+      "addressCountry": "MY"
+    }
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- ACCESSIBILITY -->
+  <a class="skip-link" href="#main-content">
+    Terus ke kandungan utama
+  </a>
+
+
+  <!-- ======================================================
+       WELCOME SCREEN
+  ======================================================= -->
+  <div
+    class="welcome-screen"
+    id="welcomeScreen"
+    aria-hidden="true"
+  >
+    <div class="welcome-glow welcome-glow-1"></div>
+    <div class="welcome-glow welcome-glow-2"></div>
+
+    <div class="welcome-content">
+      <div class="welcome-logo-wrap">
+        <img
+          src="images/logo-kopi-c-shake.jpg"
+          alt="Logo Kopi C Shake Kopi Kampung"
+          class="welcome-logo"
+        >
+      </div>
+
+      <p class="welcome-eyebrow">
+        Selamat Datang
+      </p>
+
+      <h1>Kopi C Shake</h1>
+
+      <p>
+        Nikmati pilihan istimewa kopi, matcha dan minuman sejuk kami.
+      </p>
+
+      <div class="welcome-loader" aria-label="Sekejap ya">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ======================================================
+       HEADER
+  ======================================================= -->
+  <header class="site-header" id="siteHeader">
+
+    <div class="container header-inner">
+
+      <a
+        href="#utama"
+        class="brand"
+        aria-label="Kopi C Shake - kembali ke utama"
+      >
+        <img
+          src="images/logo-kopi-c-shake.jpg"
+          alt=""
+          class="brand-logo"
+        >
+
+        <span class="brand-copy">
+          <strong>Kopi C Shake</strong>
+          <small>Kopi Kampung</small>
+        </span>
+      </a>
+
+
+      <nav class="desktop-nav" aria-label="Navigasi utama">
+        <a href="#utama" data-nav="utama">Utama</a>
+        <a href="#menu" data-nav="menu">Menu</a>
+        <a href="#tentang" data-nav="tentang">Tentang</a>
+        <a href="#galeri" data-nav="galeri">Galeri</a>
+        <a href="#lokasi" data-nav="lokasi">Lokasi</a>
+        <a href="#hubungi" data-nav="hubungi">Hubungi</a>
+      </nav>
+
+
+      <div class="header-actions">
+
+        <button
+          class="btn btn-whatsapp btn-header js-general-whatsapp ripple"
+          type="button"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M19.1 4.9A9.7 9.7 0 0 0 12.2 2a9.8 9.8 0 0 0-8.5 14.7L2.3 22l5.5-1.4a9.8 9.8 0 1 0 11.3-15.7Z"
+            />
+          </svg>
+
+          <span>Pesan Sekarang</span>
+        </button>
+
+
+        <button
+          class="menu-toggle"
+          id="menuToggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobileMenu"
+          aria-label="Buka menu navigasi"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <!-- MOBILE NAV -->
+    <div
+      class="mobile-menu"
+      id="mobileMenu"
+      aria-hidden="true"
+    >
+      <nav aria-label="Navigasi mudah alih">
+
+        <a href="#utama" data-nav="utama">
+          Utama
+        </a>
+
+        <a href="#menu" data-nav="menu">
+          Menu
+        </a>
+
+        <a href="#tentang" data-nav="tentang">
+          Tentang
+        </a>
+
+        <a href="#galeri" data-nav="galeri">
+          Galeri
+        </a>
+
+        <a href="#lokasi" data-nav="lokasi">
+          Lokasi
+        </a>
+
+        <a href="#hubungi" data-nav="hubungi">
+          Hubungi
+        </a>
+
+      </nav>
+
+      <button
+        class="btn btn-whatsapp js-general-whatsapp ripple"
+        type="button"
+      >
+        WhatsApp Untuk Pesanan
+      </button>
+    </div>
+
+  </header>
+
+
+  <!-- ======================================================
+       MAIN
+  ======================================================= -->
+  <main id="main-content">
+
+
+    <!-- ====================================================
+         HERO
+    ===================================================== -->
+    <section
+      class="hero section"
+      id="utama"
+    >
+
+      <div class="hero-orb hero-orb-one"></div>
+      <div class="hero-orb hero-orb-two"></div>
+
+
+      <div class="container hero-grid">
+
+
+        <!-- HERO COPY -->
+        <div class="hero-copy reveal">
+
+          <div class="eyebrow-pill">
+
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M12 2c-3.2 4-5.3 7-5.3 10.2A5.3 5.3 0 0 0 12 17.5a5.3 5.3 0 0 0 5.3-5.3C17.3 9 15.2 6 12 2Z"
+              />
+            </svg>
+
+            Pilihan Minuman • Pekan Tuaran
+          </div>
+
+
+          <h1>
+            Kopi Kampung,
+            <span>Shake Cara Kita.</span>
+          </h1>
+
+
+          <p class="hero-lead">
+            Daripada kopi klasik dan matcha sampai mojito serta
+            iced tea — pilih rasa kegemaran dan pesan dengan
+            mudah melalui WhatsApp.
+          </p>
+
+
+          <div class="hero-actions">
+
+            <button
+              class="btn btn-primary js-general-whatsapp ripple"
+              type="button"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M19.1 4.9A9.7 9.7 0 0 0 12.2 2a9.8 9.8 0 0 0-8.5 14.7L2.3 22l5.5-1.4a9.8 9.8 0 1 0 11.3-15.7Z"
+                />
+              </svg>
+
+              Pesan Melalui WhatsApp
+            </button>
+
+
+            <a
+              class="btn btn-secondary ripple"
+              href="#menu"
+            >
+              Lihat Menu
+
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="m9 18 6-6-6-6"/>
+              </svg>
+            </a>
+
+          </div>
+
+
+          <div class="hero-note">
+
+            <span class="hero-note-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="12" r="9"/>
+                <path d="M12 7v5l3 2"/>
+              </svg>
+            </span>
+
+            <span>
+              <strong>Waktu Operasi</strong>
+              8:00 pagi – 7:00 malam
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <!-- HERO IMAGE -->
+        <div class="hero-visual reveal reveal-scale">
+
+          <div class="hero-image-shell">
+
+            <div class="hero-card-label">
+              <small>Koleksi Pilihan</small>
+              <strong>30 Pilihan Minuman</strong>
+            </div>
+
+
+            <img
+              src="images/hero-drinks.jpg"
+              alt="Pilihan minuman Kopi C Shake"
+              class="image-fade hero-image"
+              loading="eager"
+            >
+
+
+            <div class="hero-price-chip">
+              Bermula
+              <strong>RM4.90</strong>
+            </div>
+
+          </div>
+
+
+          <div class="floating-chip chip-matcha">
+            Matcha
+          </div>
+
+          <div class="floating-chip chip-kopi">
+            Kopi
+          </div>
+
+          <div class="floating-chip chip-sejuk">
+            Minuman Sejuk
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ====================================================
+         QUICK INFO
+    ===================================================== -->
+    <section
+      class="quick-info"
+      aria-label="Maklumat ringkas"
+    >
+
+      <div class="container quick-grid">
+
+
+        <article class="info-card reveal">
+
+          <div class="icon-box">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="9"/>
+              <path d="M12 7v5l3 2"/>
+            </svg>
+          </div>
+
+          <div>
+            <span>Waktu Operasi</span>
+            <strong>8:00 pagi – 7:00 malam</strong>
+          </div>
+
+        </article>
+
+
+        <article class="info-card reveal">
+
+          <div class="icon-box">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"
+              />
+              <circle cx="12" cy="10" r="2.5"/>
+            </svg>
+          </div>
+
+          <div>
+            <span>Lokasi</span>
+            <strong>Pekan Tuaran, Sabah</strong>
+          </div>
+
+        </article>
+
+
+        <article class="info-card reveal">
+
+          <div class="icon-box">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 4h16v12H7l-3 3V4Z"/>
+              <path d="M8 9h8M8 12h5"/>
+            </svg>
+          </div>
+
+          <div>
+            <span>Pesanan</span>
+            <strong>Terus melalui WhatsApp</strong>
+          </div>
+
+        </article>
+
+
+        <article class="info-card reveal">
+
+          <div class="icon-box">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M8 3h8l1 4H7l1-4Z"/>
+              <path d="M7 7h10v14H7z"/>
+            </svg>
+          </div>
+
+          <div>
+            <span>Pilihan</span>
+            <strong>Kopi, matcha & minuman sejuk</strong>
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- ====================================================
+         MENU
+    ===================================================== -->
+    <section
+      class="menu-section section"
+      id="menu"
+    >
+
+      <div class="container">
+
+
+        <div class="section-heading reveal">
+
+          <span class="section-kicker">
+            Menu Kami
+          </span>
+
+          <h2>
+            Pilih Rasa Yang
+            <span>Ngam Dengan Anda</span>
+          </h2>
+
+          <p>
+            Harga dipaparkan berdasarkan menu Kopi C Shake.
+            Tekan “Pesan” untuk pilih kuantiti dan teruskan
+            pesanan melalui WhatsApp.
+          </p>
+
+        </div>
+
+
+        <!-- FILTER -->
+        <div class="menu-toolbar reveal">
+
+          <div
+            class="filter-scroll"
+            id="menuFilters"
+            role="group"
+            aria-label="Tapis kategori menu"
+          ></div>
+
+          <p
+            class="menu-count"
+            id="menuCount"
+            aria-live="polite"
+          ></p>
+
+        </div>
+
+
+        <!-- JS MENU -->
+        <div
+          class="menu-grid"
+          id="menuGrid"
+          aria-live="polite"
+        ></div>
+
+
+        <div
+          class="empty-state"
+          id="emptyState"
+          hidden
+        >
+
+          <div class="empty-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M5 5h14v14H5z"/>
+            </svg>
+          </div>
+
+          <h3>
+            Belum ada menu dalam kategori ini.
+          </h3>
+
+          <p>
+            Cuba pilih kategori lain.
+          </p>
+
+        </div>
+
+
+        <!-- FALLBACK TANPA JAVASCRIPT -->
+        <noscript>
+
+          <div class="noscript-menu">
+
+            <h3>Menu Kopi C Shake</h3>
+
+            <p>
+              Kopi C Shake Classic Ori RM4.90,
+              Classic Creamy RM4.90,
+              Hazelnut RM5.90,
+              Caramel RM5.90,
+              Salted Caramel RM5.90,
+              Butterscotch RM5.90,
+              Gula Melaka RM6.90,
+              Santan RM6.90,
+              Strawberry RM6.90,
+              Oreo RM6.90.
+            </p>
+
+            <p>
+              Matcha Classic Ori RM4.90,
+              Matcha Hazelnut RM5.90,
+              Matcha Caramel RM5.90,
+              Matcha Salted Caramel RM5.90,
+              Matcha Butterscotch RM5.90,
+              Matcha Strawberry RM6.90,
+              Matcha Mango RM6.90,
+              Matcha Oreo RM6.90.
+            </p>
+
+          </div>
+
+        </noscript>
+
+      </div>
+
+    </section>
+
+
+    <!-- ====================================================
+         ABOUT
+    ===================================================== -->
+    <section
+      class="about-section section"
+      id="tentang"
+    >
+
+      <div class="container about-grid">
+
+
+        <div class="about-visual reveal">
+
+          <div class="about-poster-card">
+
+            <img
+              src="images/menu-kopi.jpg"
+              alt="Poster menu Kopi C Shake"
+              loading="lazy"
+              class="image-fade"
+            >
+
+          </div>
+
+
+          <div class="about-badge">
+            <strong>Kopi C Shake</strong>
+            <span>Kopi Kampung</span>
+          </div>
+
+        </div>
+
+
+        <div class="about-copy reveal">
+
+          <span class="section-kicker">
+            Tentang Kami
+          </span>
+
+          <h2>
+            Tentang
+            <span>Kopi C Shake</span>
+          </h2>
+
+          <p>
+            Kopi C Shake menawarkan pilihan minuman berasaskan
+            kopi, matcha dan minuman sejuk dengan pelbagai
+            perisa.
+          </p>
+
+          <p>
+            Pelanggan boleh melihat menu dan harga melalui
+            website ini, memilih kuantiti serta menghantar
+            butiran pesanan terus melalui WhatsApp.
+          </p>
+
+
+          <div class="about-mini-grid">
+
+            <div>
+              <strong>30</strong>
+              <span>Pilihan menu</span>
+            </div>
+
+            <div>
+              <strong>5</strong>
+              <span>Kategori minuman</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ====================================================
+         BENEFITS
+    ===================================================== -->
+    <section class="benefits-section section">
+
+      <div class="container">
+
+        <div class="section-heading centered reveal">
+
+          <span class="section-kicker">
+            Mudah & Jelas
+          </span>
+
+          <h2>
+            Pesan Minuman
+            <span>Dengan Lebih Mudah</span>
+          </h2>
+
+        </div>
+
+
+        <div class="benefit-grid">
+
+
+          <article class="benefit-card reveal">
+
+            <div class="icon-box">
+              <svg viewBox="0 0 24 24">
+                <path d="M5 4h14v16H5z"/>
+                <path d="M8 8h8M8 12h8M8 16h5"/>
+              </svg>
+            </div>
+
+            <h3>Menu Mudah Dilihat</h3>
+
+            <p>
+              Pilihan minuman dan harga disusun mengikut
+              kategori.
+            </p>
+
+          </article>
+
+
+          <article class="benefit-card reveal">
+
+            <div class="icon-box">
+              <svg viewBox="0 0 24 24">
+                <path d="M4 4h16v12H7l-3 3V4Z"/>
+                <path d="m8 10 2 2 5-5"/>
+              </svg>
+            </div>
+
+            <h3>Order Melalui WhatsApp</h3>
+
+            <p>
+              Butiran minuman, kuantiti dan jumlah diisi
+              secara automatik.
+            </p>
+
+          </article>
+
+
+          <article class="benefit-card reveal">
+
+            <div class="icon-box">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2v20M4 7h16M5 17h14"/>
+              </svg>
+            </div>
+
+            <h3>Banyak Pilihan</h3>
+
+            <p>
+              Kopi, matcha, milk, mojito dan shaken iced tea.
+            </p>
+
+          </article>
+
+
+          <article class="benefit-card reveal">
+
+            <div class="icon-box">
+              <svg viewBox="0 0 24 24">
+                <rect x="6" y="2" width="12" height="20" rx="2"/>
+                <path d="M10 18h4"/>
+              </svg>
+            </div>
+
+            <h3>Mesra Telefon</h3>
+
+            <p>
+              Direka secara mobile-first untuk pengalaman
+              order yang lebih selesa.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ====================================================
+         GALLERY
+    ===================================================== -->
+    <section
+      class="gallery-section section"
+      id="galeri"
+    >
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+
+          <span class="section-kicker">
+            Galeri Kami
+          </span>
+
+          <h2>
+            Lihat Koleksi
+            <span>Menu Kopi C Shake</span>
+          </h2>
+
+          <p>
+            Tekan gambar untuk melihat paparan lebih besar.
+          </p>
+
+        </div>
+
+
+        <div class="gallery-grid">
+
+
+          <button
+            class="gallery-item gallery-tall reveal"
+            type="button"
+            data-lightbox="images/menu-kopi.jpg"
+            data-alt="Poster menu Kopi C Shake"
+          >
+
+            <img
+              src="images/menu-kopi.jpg"
+              alt="Poster menu Kopi C Shake"
+              class="image-fade"
+              loading="lazy"
+            >
+
+            <span>Lihat gambar</span>
+
+          </button>
+
+
+          <button
+            class="gallery-item reveal"
+            type="button"
+            data-lightbox="images/menu-matcha.jpg"
+            data-alt="Poster menu Matcha Kopi C Shake"
+          >
+
+            <img
+              src="images/menu-matcha.jpg"
+              alt="Poster menu Matcha Kopi C Shake"
+              class="image-fade"
+              loading="lazy"
+            >
+
+            <span>Lihat gambar</span>
+
+          </button>
+
+
+          <button
+            class="gallery-item reveal"
+            type="button"
+            data-lightbox="images/menu-refreshing.jpg"
+            data-alt="Poster minuman sejuk Kopi C Shake"
+          >
+
+            <img
+              src="images/menu-refreshing.jpg"
+              alt="Poster minuman sejuk Kopi C Shake"
+              class="image-fade"
+              loading="lazy"
+            >
+
+            <span>Lihat gambar</span>
+
+          </button>
+
+
+          <button
+            class="gallery-item gallery-logo reveal"
+            type="button"
+            data-lightbox="images/logo-source.jpg"
+            data-alt="Logo Kopi C Shake"
+          >
+
+            <img
+              src="images/logo-source.jpg"
+              alt="Logo Kopi C Shake Kopi Kampung"
+              class="image-fade"
+              loading="lazy"
+            >
+
+            <span>Lihat logo</span>
+
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ====================================================
+         LOCATION
+    ===================================================== -->
+    <section
+      class="location-section section"
+      id="lokasi"
+    >
+
+      <div class="container location-grid">
+
+
+        <div class="location-card reveal">
+
+          <div class="location-icon">
+
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"
+              />
+              <circle cx="12" cy="10" r="2.5"/>
+            </svg>
+
+          </div>
+
+
+          <span class="section-kicker">
+            Lokasi Kami
+          </span>
+
+
+          <h2>
+            Jumpa Kami di
+            <span>Pekan Tuaran</span>
+          </h2>
+
+
+          <p class="location-address">
+            Pekan Tuaran, Sabah
+          </p>
+
+
+          <a
+            class="btn btn-primary ripple"
+            href="https://www.google.com/maps/search/?api=1&query=Pekan%20Tuaran%2C%20Sabah"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Dapatkan Arah
+
+            <svg viewBox="0 0 24 24">
+              <path d="M5 12h14M13 6l6 6-6 6"/>
+            </svg>
+          </a>
+
+        </div>
+
+
+        <div class="map-wrap reveal">
+
+          <iframe
+            title="Peta Pekan Tuaran, Sabah"
+            src="https://www.google.com/maps?q=Pekan%20Tuaran%2C%20Sabah&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ====================================================
+         HOURS
+    ===================================================== -->
+    <section class="hours-section section">
+
+      <div class="container hours-grid">
+
+
+        <div class="hours-copy reveal">
+
+          <span class="section-kicker">
+            Waktu Operasi
+          </span>
+
+
+          <h2>
+            Rancang Waktu
+            <span>Singgah Anda</span>
+          </h2>
+
+
+          <p>
+            Kopi C Shake beroperasi dari 8:00 pagi hingga
+            7:00 malam berdasarkan maklumat yang diberikan.
+          </p>
+
+        </div>
+
+
+        <div class="hours-card reveal">
+
+          <div class="hours-row">
+
+            <span>Waktu Operasi</span>
+
+            <strong>
+              8:00 pagi – 7:00 malam
+            </strong>
+
+          </div>
+
+
+          <div class="hours-note">
+
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="9"/>
+              <path d="M12 8v5M12 16h.01"/>
+            </svg>
+
+            <p>
+              Untuk kepastian operasi pada hari anda ingin
+              datang, boleh WhatsApp terlebih dahulu.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ====================================================
+         CTA
+    ===================================================== -->
+    <section
+      class="cta-section section"
+      id="hubungi"
+    >
+
+      <div class="container">
+
+        <div class="cta-card reveal">
+
+          <div class="cta-decoration cta-decoration-one"></div>
+          <div class="cta-decoration cta-decoration-two"></div>
+
+
+          <div class="cta-content">
+
+            <span class="section-kicker light">
+              Jom Order
+            </span>
+
+
+            <h2>
+              Dah Jumpa Menu Yang
+              <span>Berkenan?</span>
+            </h2>
+
+
+            <p>
+              Tekan WhatsApp dan hantarkan pesanan anda
+              sekarang.
+            </p>
+
+
+            <button
+              class="btn btn-light js-general-whatsapp ripple"
+              type="button"
+            >
+
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M19.1 4.9A9.7 9.7 0 0 0 12.2 2a9.8 9.8 0 0 0-8.5 14.7L2.3 22l5.5-1.4a9.8 9.8 0 1 0 11.3-15.7Z"
+                />
+              </svg>
+
+              WhatsApp Untuk Pesanan
+
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- ======================================================
+       FOOTER
+  ======================================================= -->
+  <footer class="site-footer">
+
+    <div class="container footer-grid">
+
+
+      <div class="footer-brand">
+
+        <a href="#utama" class="brand">
+
+          <img
+            src="images/logo-kopi-c-shake.jpg"
+            alt=""
+            class="brand-logo"
+          >
+
+          <span class="brand-copy">
+            <strong>Kopi C Shake</strong>
+            <small>Kopi Kampung</small>
+          </span>
+
+        </a>
+
+        <p>
+          Kopi Kampung, Shake Cara Kita.
+        </p>
+
+      </div>
+
+
+      <div class="footer-col">
+
+        <h3>Navigasi</h3>
+
+        <a href="#utama">Utama</a>
+        <a href="#menu">Menu</a>
+        <a href="#tentang">Tentang</a>
+        <a href="#galeri">Galeri</a>
+        <a href="#lokasi">Lokasi</a>
+
+      </div>
+
+
+      <div class="footer-col">
+
+        <h3>Maklumat</h3>
+
+        <p>8:00 pagi – 7:00 malam</p>
+
+        <p>
+          Pekan Tuaran, Sabah
+        </p>
+
+        <a href="tel:+60134698137">
+          013-469 8137
+        </a>
+
+      </div>
+
+
+      <div class="footer-col">
+
+        <h3>Pesanan</h3>
+
+        <button
+          class="footer-link-button js-general-whatsapp"
+          type="button"
+        >
+          WhatsApp Kami
+        </button>
+
+
+        <a
+          href="https://www.google.com/maps/search/?api=1&query=Pekan%20Tuaran%2C%20Sabah"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Dapatkan Arah
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="container footer-bottom">
+
+      <p>
+        © <span id="currentYear"></span>
+        Kopi C Shake. Hak cipta terpelihara.
+      </p>
+
+
+      <a
+        href="#utama"
+        class="back-to-top"
+        aria-label="Kembali ke atas"
+      >
+        ↑
+      </a>
+
+    </div>
+
+  </footer>
+
+
+  <!-- ======================================================
+       FLOATING WHATSAPP
+  ======================================================= -->
+  <button
+    class="floating-whatsapp js-general-whatsapp"
+    type="button"
+    aria-label="Pesan sekarang melalui WhatsApp"
+  >
+
+    <svg viewBox="0 0 24 24">
+      <path
+        d="M19.1 4.9A9.7 9.7 0 0 0 12.2 2a9.8 9.8 0 0 0-8.5 14.7L2.3 22l5.5-1.4a9.8 9.8 0 1 0 11.3-15.7Z"
+      />
+    </svg>
+
+    <span>
+      Pesan Sekarang
+    </span>
+
+  </button>
+
+
+  <!-- MOBILE STICKY CTA -->
+  <div class="mobile-order-bar">
+
+    <button
+      class="js-general-whatsapp"
+      type="button"
+    >
+
+      <svg viewBox="0 0 24 24">
+        <path
+          d="M19.1 4.9A9.7 9.7 0 0 0 12.2 2a9.8 9.8 0 0 0-8.5 14.7L2.3 22l5.5-1.4a9.8 9.8 0 1 0 11.3-15.7Z"
+        />
+      </svg>
+
+      <span>
+        <small>WhatsApp</small>
+        Pesan Sekarang
+      </span>
+
+    </button>
+
+  </div>
+
+
+  <!-- ======================================================
+       ORDER MODAL
+  ======================================================= -->
+  <div
+    class="modal-backdrop"
+    id="orderModal"
+    hidden
+  >
+
+    <div
+      class="order-sheet"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="orderTitle"
+      aria-describedby="orderDescription"
+    >
+
+      <div class="sheet-handle"></div>
+
+
+      <div class="modal-header">
+
+        <div>
+
+          <span class="modal-kicker">
+            Pesanan Anda
+          </span>
+
+          <h2 id="orderTitle">
+            Pilih Kuantiti
+          </h2>
+
+        </div>
+
+
+        <button
+          class="icon-button"
+          id="closeOrderModal"
+          type="button"
+          aria-label="Tutup modal pesanan"
+        >
+          ×
+        </button>
+
+      </div>
+
+
+      <p
+        id="orderDescription"
+        class="sr-only"
+      >
+        Tetapkan kuantiti dan nota sebelum meneruskan
+        pesanan melalui WhatsApp.
+      </p>
+
+
+      <div class="modal-product">
+
+        <div
+          class="modal-product-image"
+          id="modalProductImage"
+        ></div>
+
+
+        <div>
+
+          <span
+            class="modal-category"
+            id="modalCategory"
+          ></span>
+
+          <h3 id="modalProductName"></h3>
+
+          <p id="modalUnitPrice"></p>
+
+        </div>
+
+      </div>
+
+
+      <div class="order-control-row">
+
+        <div>
+
+          <label>
+            Kuantiti
+          </label>
+
+          <span>
+            Pilih jumlah minuman
+          </span>
+
+        </div>
+
+
+        <div
+          class="quantity-control"
+          aria-label="Kawalan kuantiti"
+        >
+
+          <button
+            id="qtyMinus"
+            type="button"
+            aria-label="Kurangkan kuantiti"
+          >
+            −
+          </button>
+
+
+          <output
+            id="qtyValue"
+            aria-live="polite"
+          >
+            1
+          </output>
+
+
+          <button
+            id="qtyPlus"
+            type="button"
+            aria-label="Tambah kuantiti"
+          >
+            +
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <div class="note-field">
+
+        <label for="orderNote">
+          Nota pesanan
+          <span>(pilihan)</span>
+        </label>
+
+
+        <textarea
+          id="orderNote"
+          rows="3"
+          maxlength="180"
+          placeholder="Contoh: Kurang ais"
+        ></textarea>
+
+
+        <small>
+          <span id="noteCount">0</span>/180
+        </small>
+
+      </div>
+
+
+      <div class="order-total">
+
+        <span>
+          Jumlah anggaran
+        </span>
+
+        <strong id="orderTotal">
+          RM0.00
+        </strong>
+
+      </div>
+
+
+      <button
+        class="btn btn-primary btn-full"
+        id="confirmOrder"
+        type="button"
+      >
+
+        <span class="button-content">
+          Teruskan ke WhatsApp
+        </span>
+
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <!-- ======================================================
+       LIGHTBOX
+  ======================================================= -->
+  <div
+    class="lightbox"
+    id="lightbox"
+    hidden
+  >
+
+    <button
+      class="icon-button lightbox-close"
+      id="lightboxClose"
+      type="button"
+      aria-label="Tutup galeri"
+    >
+      ×
+    </button>
+
+
+    <div
+      class="lightbox-content"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Paparan gambar galeri"
+    >
+
+      <img
+        id="lightboxImage"
+        src="images/menu-kopi.jpg"
+        alt=""
+      >
+
+    </div>
