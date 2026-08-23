@@ -11,7 +11,7 @@ const WHATSAPP_NUMBER = "0129499359";
 
 
 /* =========================================
-   WHATSAPP
+   PHONE
 ========================================= */
 
 function cleanMalaysiaPhone(phone) {
@@ -31,6 +31,7 @@ function cleanMalaysiaPhone(phone) {
 
 
   return digits;
+
 }
 
 
@@ -40,15 +41,19 @@ const CLEAN_PHONE =
   );
 
 
+/* =========================================
+   WHATSAPP
+========================================= */
+
 function openWhatsApp() {
 
   const message =
     `Hai ${BUSINESS_NAME}! 👋\n\n` +
     `Saya sudah lihat menu di website dan ingin membuat pesanan.\n\n` +
-    `Menu / minuman yang saya mahu:\n` +
-    `1. \n\n` +
+    `Menu / minuman:\n` +
+    `\n` +
     `Kuantiti:\n` +
-    `1\n\n` +
+    `\n` +
     `Boleh maklumkan cara untuk saya teruskan pesanan? Terima kasih.`;
 
 
@@ -65,32 +70,26 @@ function openWhatsApp() {
 }
 
 
-/* =========================================
-   WHATSAPP BUTTONS
-========================================= */
-
 function initWhatsApp() {
 
-  const buttons =
-    document.querySelectorAll(
+  document
+    .querySelectorAll(
       ".js-whatsapp"
-    );
+    )
+    .forEach(button => {
 
+      button.addEventListener(
+        "click",
+        openWhatsApp
+      );
 
-  buttons.forEach(button => {
-
-    button.addEventListener(
-      "click",
-      openWhatsApp
-    );
-
-  });
+    });
 
 }
 
 
 /* =========================================
-   MOBILE NAVIGATION
+   MOBILE MENU
 ========================================= */
 
 function initMobileMenu() {
@@ -135,17 +134,17 @@ function initMobileMenu() {
     );
 
 
+    mobileMenu.setAttribute(
+      "aria-hidden",
+      String(!open)
+    );
+
+
     hamburger.setAttribute(
       "aria-label",
       open
         ? "Tutup menu"
         : "Buka menu"
-    );
-
-
-    mobileMenu.setAttribute(
-      "aria-hidden",
-      String(!open)
     );
 
   }
@@ -155,14 +154,10 @@ function initMobileMenu() {
     "click",
     () => {
 
-      const isOpen =
-        mobileMenu.classList.contains(
-          "open"
-        );
-
-
       setMenu(
-        !isOpen
+        !mobileMenu.classList.contains(
+          "open"
+        )
       );
 
     }
@@ -196,10 +191,10 @@ function initMobileMenu() {
 
       if (
         event.target.closest(
-          "#mobileMenu"
+          "#hamburger"
         ) ||
         event.target.closest(
-          "#hamburger"
+          "#mobileMenu"
         )
       ) {
         return;
@@ -236,7 +231,7 @@ function initMobileMenu() {
 
 
 /* =========================================
-   HEADER SCROLL
+   HEADER
 ========================================= */
 
 function initHeader() {
@@ -260,7 +255,7 @@ function initHeader() {
 
     header.classList.toggle(
       "scrolled",
-      window.scrollY > 20
+      window.scrollY > 15
     );
 
   }
@@ -278,8 +273,7 @@ function initHeader() {
       }
 
 
-      ticking =
-        true;
+      ticking = true;
 
 
       requestAnimationFrame(
@@ -287,8 +281,7 @@ function initHeader() {
 
           updateHeader();
 
-          ticking =
-            false;
+          ticking = false;
 
         }
       );
@@ -362,7 +355,7 @@ function initSmoothScroll() {
             target.getBoundingClientRect().top +
             window.scrollY -
             headerHeight -
-            10;
+            8;
 
 
           const reducedMotion =
@@ -391,7 +384,7 @@ function initSmoothScroll() {
 
 
 /* =========================================
-   SCROLL REVEAL
+   REVEAL
 ========================================= */
 
 function initReveal() {
@@ -440,10 +433,9 @@ function initReveal() {
             }
 
 
-            entry.target
-              .classList.add(
-                "visible"
-              );
+            entry.target.classList.add(
+              "visible"
+            );
 
 
             observer.unobserve(
@@ -459,7 +451,7 @@ function initReveal() {
         threshold: 0.1,
 
         rootMargin:
-          "0px 0px -40px 0px"
+          "0px 0px -35px 0px"
       }
 
     );
@@ -476,65 +468,51 @@ function initReveal() {
 
 
 /* =========================================
-   IMAGE ERROR HANDLING
+   IMAGE FALLBACK
 ========================================= */
 
 function initImages() {
 
-  const images =
-    document.querySelectorAll(
-      "img"
-    );
+  document
+    .querySelectorAll("img")
+    .forEach(image => {
+
+      image.addEventListener(
+        "error",
+        () => {
+
+          const placeholder =
+            document.createElement(
+              "div"
+            );
 
 
-  images.forEach(image => {
-
-    image.addEventListener(
-      "error",
-      () => {
-
-        const parent =
-          image.parentElement;
+          placeholder.className =
+            "image-placeholder";
 
 
-        if (!parent) {
-          return;
-        }
+          placeholder.textContent =
+            image.alt ||
+            BUSINESS_NAME;
 
 
-        const placeholder =
-          document.createElement(
-            "div"
+          image.replaceWith(
+            placeholder
           );
 
+        },
+        {
+          once: true
+        }
+      );
 
-        placeholder.className =
-          "image-placeholder";
-
-
-        placeholder.textContent =
-          image.alt ||
-          BUSINESS_NAME;
-
-
-        image.replaceWith(
-          placeholder
-        );
-
-      },
-
-      {
-        once: true
-      }
-    );
-
-  });
+    });
 
 }
 
 
 /* =========================================
-   MENU LIGHTBOX
+   LIGHTBOX
 ========================================= */
 
 function initLightbox() {
@@ -577,9 +555,7 @@ function initLightbox() {
     null;
 
 
-  function openLightbox(
-    button
-  ) {
+  function openLightbox(button) {
 
     lastFocused =
       button;
@@ -616,11 +592,7 @@ function initLightbox() {
 
 
     setTimeout(
-      () => {
-
-        closeButton.focus();
-
-      },
+      () => closeButton.focus(),
       40
     );
 
@@ -639,9 +611,7 @@ function initLightbox() {
 
 
     if (lastFocused) {
-
       lastFocused.focus();
-
     }
 
   }
@@ -675,8 +645,7 @@ function initLightbox() {
     event => {
 
       if (
-        event.target ===
-        lightbox
+        event.target === lightbox
       ) {
 
         closeLightbox();
@@ -707,7 +676,7 @@ function initLightbox() {
 
 
 /* =========================================
-   COPYRIGHT YEAR
+   YEAR
 ========================================= */
 
 function initYear() {
@@ -721,8 +690,7 @@ function initYear() {
   if (year) {
 
     year.textContent =
-      new Date()
-        .getFullYear();
+      new Date().getFullYear();
 
   }
 
@@ -730,7 +698,7 @@ function initYear() {
 
 
 /* =========================================
-   INITIALIZE WEBSITE
+   INIT
 ========================================= */
 
 function initWebsite() {
@@ -753,10 +721,6 @@ function initWebsite() {
 
 }
 
-
-/* =========================================
-   START
-========================================= */
 
 if (
   document.readyState ===
