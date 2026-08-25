@@ -48,10 +48,10 @@ function openWhatsApp() {
 
   const message =
     `Hai ${BUSINESS_NAME}! 👋\n\n` +
-    `Saya sudah lihat menu di website dan ingin buat order.\n\n` +
-    `Menu / minuman:\n\n` +
-    `Kuantiti:\n\n` +
-    `Boleh maklumkan cara untuk saya teruskan order? Terima kasih.`;
+    `Saya mau order.\n\n` +
+    `Minuman & Kuantiti:\n\n` +
+    `Waktu Pickup:\n\n` +
+    `Boleh saya teruskan order? Terima kasih.`;
 
 
   const url =
